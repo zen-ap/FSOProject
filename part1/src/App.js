@@ -1,27 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-const Hello = (props) => {
+const Hello = (param) => {
   return (
     <div>
-      <p>
-        Hello {props.name}, you are {props.age} years old
-      </p>
+      <p>Hello {param.name}, you are {param.age} years old.</p>
     </div>
   )
 }
 
 const App = () => {
-  const name = 'Peter'
-  const age = 10
-
+  const name = 'Anoop'
+  const age = 20
   return (
-    <div>
+    <>
       <h1>Greetings</h1>
-      <Hello name="Maya" age={26 + 10} />
-      <Hello name={name} age={age} />
-    </div>
+      <Hello name = {name} age = {age}/>
+    </>
   )
 }
 
-export default App;
+export default App
